@@ -1,0 +1,22 @@
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 70px;
+    /* font-size: smaller; */
+}
+
+.btn {
+    background-color: rgb(254, 5, 5);
+    font-size: 15px;
+    color: var(--text);
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #fff;
+
+}
