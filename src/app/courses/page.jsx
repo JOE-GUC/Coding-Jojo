@@ -1,6 +1,7 @@
 
 "use client"
 import { useState, useEffect } from 'react';
+import styles from './page.module.css'
 
 export default function Home() {
   const [courses, setCourses] = useState([]);
@@ -9,11 +10,11 @@ export default function Home() {
   useEffect(() => {
     async function fetchCourses() {
       try {
-        const response = await fetch('https://courses.edx.org/api/courses/v1/courses/');
+        const response = await fetch('/api/courses');
         // const response = await fetch("https://api.coursera.org/api/courses.v1");
 
         const data = await response.json();
-        setCourses(data.results);
+        setCourses(data);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching courses:', error);
@@ -24,22 +25,21 @@ export default function Home() {
   }, []);
 console.log(courses);
   return (
-    <div>
-      <h1>edX Courses</h1>
+    <div className={styles.hipe}>
+      <h1>Popular Courses</h1>
       {loading ? (
-        <p>Loading...</p>
+        <img className={styles.loader} src="/loader.png" alt="" />
       ) : (
-        <ul>
+        <>
           {courses.map(course => (
-            <li key={course.id}>
+            <li className={styles.cour} key={course.id}>
+              <img src={course.media.image.small} alt="Course Image" />
               <h2>{course.name}</h2>
-              <p>{course.description}</p>
-              <p>Start Date: {course.start}</p>
-              <p>End Date: {course.end}</p>
-              <img src={course.media.course_image.uri} alt="Course Image" />
+              <p>Price: {course.start}</p>
+              <p className={styles.rating}>⭐ {course.Rate}</p>
             </li>
           ))}
-        </ul>
+        </>
       )}
     </div>
   );

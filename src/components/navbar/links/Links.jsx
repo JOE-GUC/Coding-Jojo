@@ -26,7 +26,7 @@ const Links = () => {
             {links.map((link=>(
                 <Link href={link.path} key={link.title}>{link.title}</Link>
             )))}
-                    <Link href="/signUp" className={styles.btn}>Sign Up</Link>
+                    <Link href="/signUp" className={styles.btn}>Create an account</Link>
 
         </div>
     )

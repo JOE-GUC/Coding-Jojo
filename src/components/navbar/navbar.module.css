@@ -1,4 +1,8 @@
 .container {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick the Navbar at the top of the viewport */
+    z-index: 1000;
     height: 100px;
     width: 100;
     display: flex;
@@ -28,4 +32,34 @@
     padding-right: 20px;
     
 }
+
+
+.darkmodetoggle {
+    background-color: var(--bg);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+  .Linkedin Links:hover {
+    background-color: var(--text);
+    color: var(--bg);
+    padding: 7px;
+    border-radius: 50px;
+    border: none;  }
+
+.linksContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+.link{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
 
