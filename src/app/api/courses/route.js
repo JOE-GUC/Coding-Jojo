@@ -1,4 +1,4 @@
-import courses from "@/models/courses";
+import courses from "../../models/courses";
 import connectDB from "@/utils/db";
 import { NextResponse } from "next/server";
 
