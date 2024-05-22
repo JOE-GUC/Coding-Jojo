@@ -1,9 +1,8 @@
-// useDarkMode.js
-
 import { useEffect, useState } from 'react';
 
 const useDarkMode = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const isDarkModeSaved = localStorage.getItem('isDarkMode');
+    const [isDarkMode, setIsDarkMode] = useState(isDarkModeSaved ? JSON.parse(isDarkModeSaved) : false);
 
     useEffect(() => {
         const body = document.body;
@@ -12,6 +11,7 @@ const useDarkMode = () => {
         } else {
             body.classList.remove('dark-mode');
         }
+        localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode));
     }, [isDarkMode]);
 
     const toggleDarkMode = () => {

@@ -13,6 +13,7 @@
 
 .container img {
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .btn {
@@ -60,6 +61,7 @@
     text-decoration: none;
     margin-right: 10px;
 }
+
 
 
 
