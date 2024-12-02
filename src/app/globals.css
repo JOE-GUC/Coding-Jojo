@@ -30,30 +30,26 @@ a {
   color: inherit;
 }
 
-a:hover {
-  color: red;
-}
+
 
 h1 {
   font-size: 60px;
-  padding-left: 60px;
+  /* padding-left: 60px; */
 }
 
 .dark-mode {
-  background-color: #fff;
-  color: #000;
-}
+   background-color: #fff;
+  color: #000; 
+} 
 
 .darkmodetoggle {
-  font-size: 1.5rem;
+   font-size: 1.5rem;
+   background-color: #000;
   cursor: pointer;
-  color: #fff; /* Adjust color for toggle icon in dark mode */
+   color: #ffffff;
 }
 
-/* 
-body {
-  transition: background-color 0.4s;
-} */
+
 
 
 

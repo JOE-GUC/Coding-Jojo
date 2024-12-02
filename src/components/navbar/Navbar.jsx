@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState } from 'react';
 import Links from './links/Links';
 import Link from 'next/link';
@@ -32,9 +32,7 @@ const Navbar = () => {
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
-
-    // Reset specific course search when the user is typing in the search input
-    setSpecificCourseSearch(false);
+    setSpecificCourseSearch(false); // Reset specific course search when user types
   };
 
   const handleSearchSubmit = () => {
@@ -42,8 +40,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Image src="/coding-jojo-preview.png" width={130} height={60} className={styles.image} alt="Remove" />
+<div className={styles.navbarContainer}>
+  <div className={styles.contentWrapper}>
+    <div className={styles.logoContainer}>
+      <Image
+        src="/coding-jojo-preview.png"
+        width={130}
+        height={60}
+        className={styles.logo}
+        alt="Logo"
+      />
+    </div>
+
+    <div className={styles.searchContainer}>
       <input
         type="search"
         value={searchTerm}
@@ -51,31 +60,26 @@ const Navbar = () => {
         className={styles.searchInput}
         placeholder="Search for your favorite course"
       />
-      {/* <button onClick={handleSearchSubmit} className={styles.searchButton}>
+      <button onClick={handleSearchSubmit} className={styles.searchButton}>
         Search
-      </button> */}
+      </button>
+    </div>
+
+    <div className={styles.navLinks}>
       <nav>
-        <button onClick={toggleDarkMode} className={styles.darkmodetoggle}>
+        <button onClick={toggleDarkMode} className={styles.darkModeToggle}>
           {isDarkMode ? '🔆' : '🌙'}
         </button>
       </nav>
 
-      <div className={styles.Linkedin}>
+      <div className={styles.linksContainer}>
         <Links courses={filteredCourses} />
       </div>
-      {/* {!session ? Links.map((link, index) => (
-          <Link href={link.href} className={styles.link} key={index}>{link.name}</Link>
-        )) : (
-          linktrue.map((link, index) => (
-            <Link href={link.href} className={styles.link} key={index}>{link.name}</Link>
-          )
-          )
-        )}{
-          session && <Image src={session.user.image} width={20} height={20} style={{borderRadius:"50%"}} />
-        } */}
     </div>
-  );
+  </div>
+</div>
 
+  );
 };
 
 export default Navbar;

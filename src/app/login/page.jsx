@@ -48,8 +48,8 @@ const LoginPage = () => {
         </div>
         <h4>OR</h4>
         <button className={styles.btn} onClick={() => signIn('google')}>Login with Google</button>
-        <Link  href="/signUp" className={styles.link}>
-          <p>{"Don't have an account? Sign Up"}</p></Link>
+        <Link href="/signUp" className={styles.link}>Don't have an account? <span>Sign Up</span></Link>
+
       </div>
     </>
   );

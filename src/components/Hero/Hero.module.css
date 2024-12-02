@@ -1,61 +1,557 @@
+/* Dynamic Gradient Background */
+.heroContainer {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+
+}
+
+.heroContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(54, 115, 253, 0.2) 20%, transparent 70%),
+              radial-gradient(circle, rgba(255, 0, 0, 0.1) 15%, transparent 75%),
+              radial-gradient(circle, rgba(0, 255, 128, 0.15) 25%, transparent 80%);
+  background-size: 30% 30%;
+  z-index: -1;
+  animation: backgroundMove 30s infinite linear;
+}
+
+.heroContainer {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+/* Keyframes for smooth background animation */
+@keyframes backgroundMove {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+
+.contentWrapper {
+  max-width: 1450px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .slider {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  position: relative;
-  height: 500px;
-
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
 }
 
-.description h1 {
-  font-weight: 700;
-  margin-top: 100px;
-  /* color: var(--text); */
+.description {
+  flex: 1;
+  max-width: 600px;
 }
 
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-.description p {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 60px;
-  font-size: 15px;
+.heading span {
+  color:#3498db;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #2980b9;
+}
+
+.secondaryBtn {
+  background-color: white;
+  color: #3498db;
+  border: 2px solid #3498db;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #f8f9fa;
 }
 
 .videoContainer {
-  margin-top: 100px;
-  margin-right: 170px;
-  position: absolute;
-  width: 35%;
-  height: 70%;
-  top: 0.5rem;
-  right: 0.5rem;
+  flex: 1;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+.coursesSection {
+  margin-top: 4rem;
+  text-align: center;
+}
 
-.btn {
-  margin-left: 70px;
-  margin-top: 10px;
-  font-size: 14px;
-  width: 110px;
-  height: 35px;
-  border: none;
-  border-radius: 50px;
-  background-color: rgb(168, 2, 2);
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.courseCard {
+  background-color: rgba(33, 39, 57, 0.527);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courseIcon {
+  margin-bottom: 1rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.featureCard {
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonialSection {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.testimonialHeading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonialCard {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description, .videoContainer {
+    max-width: 100%;
+  }
+
+  .features, .courseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features, .courseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContainer {
+    padding: 0 3%;
+  }
+}
+
+.heroContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 5%;
+}
+
+.heroMainSection {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.codingResourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resourceCard {
+  background: rgba(202, 186, 255, 0.589);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.resourceIcon {
+  margin-bottom: 1rem;
+}
+
+.resourceCard h3 {
+  margin-bottom: 0.5rem;
+}
+
+.resourceCard p {
+  font-size: 0.9rem;
+}
+
+.resourceMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.ctaButtonGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryCta, .secondaryCta {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primaryCta {
+  background-color: #3498db;
   color: white;
+  border: none;
+}
+
+.secondaryCta {
+  background-color: white;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.codeVisualizationSection {
+  flex: 1;
+  position: relative;
+}
+
+.codeSnippetCard {
+  background: rgba(84, 84, 84, 0.374);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.codeContent {
+  background: #66666690;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.codingEnvironment {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.codingEnvironment h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.environmentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.environmentCard {
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.environmentCard:hover {
+  transform: translateY(-10px);
+}
+
+.environmentCard h3 {
+  margin: 1rem 0;
+}
+
+
+
+@media (max-width: 1200px) {
+  .heroMainSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .codingResourcesGrid,
+  .environmentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .ctaButtonGroup {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .codingResourcesGrid,
+  .environmentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.courseCard, .featureCard, .resourceCard, .testimonialCard, .codeSnippetCard {
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: all 0.3s ease;
+}
+
+/* Course Cards */
+.courseCard {
+  background: linear-gradient(
+    145deg, 
+    rgba(52, 152, 219, 0.2), 
+    rgba(41, 128, 185, 0.1)
+  );
+}
+
+.courseCard h3 {
+  font-weight: 600;
+}
+
+
+/* Feature Cards */
+.featureCard {
+  background: linear-gradient(
+    145deg, 
+    rgba(46, 204, 113, 0.2), 
+    rgba(39, 174, 96, 0.1)
+  );
+}
+
+.featureCard h3 {
+  font-weight: 600;
+}
+
+/* Resource Cards */
+.resourceCard {
+  background: linear-gradient(
+    145deg, 
+    rgba(155, 89, 182, 0.2), 
+    rgba(142, 68, 173, 0.1)
+  );
+}
+
+
+/* Testimonial Cards */
+.testimonialCard {
+  background: linear-gradient(
+    145deg, 
+    rgba(241, 196, 15, 0.2), 
+    rgba(243, 156, 18, 0.1)
+  );
+}
+
+.testimonialCard .testimonialText {
+  font-style: italic;
+}
+
+/* Code Snippet Cards */
+.codeSnippetCard {
+  background: linear-gradient(
+    145deg, 
+    rgba(52, 73, 94, 0.2), 
+    rgba(44, 62, 80, 0.1)
+  );
+}
+
+.codeHeader {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.codeContent {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+.courseCard:hover, 
+.featureCard:hover, 
+.resourceCard:hover, 
+.testimonialCard:hover, 
+.codeSnippetCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .courseCard, .featureCard, .resourceCard, .testimonialCard, .codeSnippetCard {
+    backdrop-filter: blur(5px);
+  }
+}
+
+.testimonialCarouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.testimonialCarousel {
+  max-width: 1450px;
+  width: 100%;
+  position: relative;
+}
+
+.carouselNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.navButton {
+  background-color: rgba(52, 152, 219, 0.2);
+  border: none;
+  top: -700px;
+  padding: 1rem 1rem;
+  border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: rgba(128, 0, 0, 0.741);
-
+.navButton:hover {
+  background-color: rgba(52, 152, 219, 0.4);
 }
 
-.videoContainer iframe {
-  object-fit: cover;
-  border-radius: 10px;
+.testimonialIndicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.videoContainer:hover {
-  transform: scale(1.1);
-  transition: 1s;
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: #3498db;
+  width: 14px;
+  height: 14px;
 }

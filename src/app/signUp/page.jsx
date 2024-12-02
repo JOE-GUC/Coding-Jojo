@@ -30,7 +30,7 @@ const SignUpPage = () => {
         </div>
         <h4>OR</h4>
         <button className={styles.btn} onClick={() => signIn('google')}>Sign Up with Google</button>
-        <Link href="/login" className={styles.link}>Already have an account? Login</Link>
+        <Link href="/login" className={styles.link}>Already have an account? <span>Login</span></Link>
       </div>
     </>
   );

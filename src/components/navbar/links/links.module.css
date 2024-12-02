@@ -4,12 +4,13 @@
     gap: 20px;
     padding-right: 70px;
     color: #fff;
-    /* font-size: smaller; */
+    font-size: smaller;
 }
+
 
 .btn {
     background-color: rgb(254, 5, 5);
-    font-size: 15px;
+    font-size: 13px;
     color: var(--text);
     padding: 10px;
     border-radius: 50px;

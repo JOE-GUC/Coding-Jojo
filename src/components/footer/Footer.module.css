@@ -1,8 +1,60 @@
-.copyright {
-    display: flex;
-    font-size: smaller;
-    margin-top: 50px;
-    margin-right: 50px;
-    justify-content: right;
+.footer {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 2rem 0;
+  font-family: Arial, sans-serif;
+}
 
+.contentWrapper {
+  max-width: 1450px; /* Aligns with the hero section */
+  margin: 0 auto; /* Ensures equal margins on both sides */
+  padding: 0 20px; /* Adds padding for smaller screens */
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footerSection h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ff4081;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+
+.footerSection ul li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.socialLinks li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footerBottom {
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: #999;
 }

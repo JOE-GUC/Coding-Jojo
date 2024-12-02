@@ -13,7 +13,15 @@ const Links = () => {
             path: "/courses",
         },
         {
-            title: "",
+            title: "About",
+            path: "/courses",
+        },
+        {
+            title: "Contant",
+            path: "/courses",
+        },
+        {
+            // title: "",
             path: "/login",
         },
         {
@@ -26,7 +34,8 @@ const Links = () => {
             {links.map((link=>(
                 <Link href={link.path} key={link.title}>{link.title}</Link>
             )))}
-                    <Link href="/signUp" className={styles.btn}>Create an account</Link>
+                    {/* <Link href="/login" className={styles.bton}>Login</Link> */}
+                    <Link href="/signUp" className={styles.btn}>SignUp</Link>
 
         </div>
     )
