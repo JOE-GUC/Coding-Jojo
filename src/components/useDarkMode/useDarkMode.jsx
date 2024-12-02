@@ -1,10 +1,18 @@
 import { useEffect, useState } from 'react';
 
 const useDarkMode = () => {
-    const isDarkModeSaved = localStorage.getItem('isDarkMode');
-    const [isDarkMode, setIsDarkMode] = useState(isDarkModeSaved ? JSON.parse(isDarkModeSaved) : false);
+    const [isDarkMode, setIsDarkMode] = useState(false); // Initialize to a default value
 
     useEffect(() => {
+        // Access localStorage only in the client
+        const isDarkModeSaved = localStorage.getItem('isDarkMode');
+        if (isDarkModeSaved !== null) {
+            setIsDarkMode(JSON.parse(isDarkModeSaved));
+        }
+    }, []);
+
+    useEffect(() => {
+        // Update the body class and localStorage when isDarkMode changes
         const body = document.body;
         if (isDarkMode) {
             body.classList.add('dark-mode');
@@ -15,13 +23,10 @@ const useDarkMode = () => {
     }, [isDarkMode]);
 
     const toggleDarkMode = () => {
-        setIsDarkMode(prevMode => !prevMode);
+        setIsDarkMode((prevMode) => !prevMode);
     };
 
     return { isDarkMode, toggleDarkMode };
 };
 
 export default useDarkMode;
-
-
-
