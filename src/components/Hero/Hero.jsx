@@ -116,7 +116,7 @@ const TestimonialCarousel = () => {
           {currentGroup.map((testimonial, index) => (
             <div key={index} className={styles.testimonialCard}>
               <div className={styles.rating}>5/5</div>
-              <p className={styles.testimonialText}>"{testimonial.text}"</p>
+              <p className={styles.testimonialText}>&quot;{testimonial.text}&quot;</p>
               <div className={styles.testimonialProfile}>
                 <Image
                   src={testimonial.image}
