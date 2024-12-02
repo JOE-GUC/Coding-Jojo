@@ -53,13 +53,13 @@ export default function Home() {
         <h1 className={styles.heading}>Popular Courses</h1>
         {loading ? (
           <div className={styles.loaderContainer}>
-            <img className={styles.loader} src="/loader.png" alt="Loading..." />
+            <Image className={styles.loader} src="/loader.png" alt="Loading..." />
           </div>
         ) : (
           <div className={styles.coursesGrid}>
             {courses.map((course) => (
               <div className={styles.courseCard} key={course.id}>
-                <img
+                <Image
                   className={styles.courseImage}
                   src={course.media.image.small}
                   alt="Course Image"
