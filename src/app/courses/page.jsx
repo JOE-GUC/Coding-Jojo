@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import the Image component
 import styles from './page.module.css';
 
 export default function Home() {
@@ -30,9 +31,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <button className={styles.sidebartoggle} onClick={toggleSidebar}>
-          ☰
-        </button>
-     
+        ☰
+      </button>
+
       {/* Sidebar */}
       <aside className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
         <button className={styles.closeButton} onClick={toggleSidebar}>
@@ -77,7 +78,6 @@ export default function Home() {
           </div>
         )}
       </main>
-
     </div>
   );
 }
