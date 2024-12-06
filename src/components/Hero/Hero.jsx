@@ -283,6 +283,138 @@ const Hero = () => {
 
   return (
     <div className={styles.heroContainer}>
+
+<section className={styles.courseContainer}>
+  <div className={styles.courseNav}>
+    <ul>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Css</Link>
+      </li>
+      <li>
+        <Link href="">javaScript</Link>
+      </li>
+      <li>
+        <Link href="">React</Link>
+      </li>
+      <li>
+        <Link href="">Next</Link>
+      </li>
+      <li>
+        <Link href="">nodejs</Link>
+      </li>
+      <li>
+        <Link href="">Python</Link>
+      </li>
+      <li>
+        <Link href="">Angular</Link>
+      </li>
+      <li>
+        <Link href="">java</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+    
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+      <li>
+        <Link href="">Html</Link>
+      </li>
+    </ul>
+  </div>
+</section>
+
       <motion.div 
         className={styles.contentWrapper}
         initial={{ opacity: 0 }}
@@ -378,10 +510,10 @@ const Hero = () => {
         {/* Features Section */}
         <div className={styles.features}>
           {[
-            { icon: '/tutor-removebg-preview.png', title: 'Expert Tutors', text: 'Learn from industry professionals with real-world experience.' },
+            { icon: '/education-success-consulting-center-solutions-png_83943-removebg-preview.png', title: 'Expert Tutors', text: 'Learn from industry professionals with real-world experience.' },
             { icon: '/download__4_-removebg-preview.png', title: 'Verified Profiles', text: 'Guaranteed quality and authenticity of our instructors.' },
-            { icon: '/flix-removebg-preview.png', title: 'Flexible Learning', text: 'Learn at your own pace, anytime and anywhere.' },
-            { icon: '/14', title: 'Affordable Prices', text: 'High-quality education at budget-friendly rates.' }
+            { icon: '/code-education-logo-icon-design-vector-22644747-removebg-preview.png', title: 'Flexible Learning', text: 'Learn at your own pace, anytime and anywhere.' },
+            { icon: '/affordable-rubber-stamp-seal-vector-removebg-preview.png', title: 'Affordable Prices', text: 'High-quality education at budget-friendly rates.' }
           ].map((feature, index) => (
             <motion.div 
               key={index} 
@@ -518,7 +650,7 @@ const Hero = () => {
             </div>
             <div className={styles.environmentCard}>
               <Image 
-                src="/cloud.jpg" 
+                src="/cloud-removebg-preview.png" 
                 alt="Cloud Development" 
                 width={80} 
                 height={80} 

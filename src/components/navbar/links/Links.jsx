@@ -12,25 +12,9 @@ const Links = () => {
             title: "Courses",
             path: "/courses",
         },
-        {
-            title: "About",
-            path: "/courses",
-        },
-        {
-            title: "Contant",
-            path: "/courses",
-        },
-        {
-            // title: "",
-            path: "/login",
-        },
-        {
-            // title: "Sign Up",
-            path: "/signUp",
-        },
     ];
     return (
-        <div className={styles.links}>
+        <div className={styles.linkx}>
             {links.map((link=>(
                 <Link href={link.path} key={link.title}>{link.title}</Link>
             )))}

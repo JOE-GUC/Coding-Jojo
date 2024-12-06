@@ -1,9 +1,9 @@
-.links {
+.linkx {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-right: 70px;
-    color: #fff;
+    /* color: #fff; */
     font-size: smaller;
 }
 
