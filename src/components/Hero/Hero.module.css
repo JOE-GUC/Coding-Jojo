@@ -608,7 +608,7 @@
 /* Optional: Hover state to improve interactivity */
 .courseNav ul li:hover {
 padding: 7px;
-  background-color: #000000; /* Slightly different color for hover */
+  background-color: #fc0000; /* Slightly different color for hover */
 }
 
 
