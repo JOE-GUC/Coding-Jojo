@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
+
 const testimonials = [
   {
     name: 'John Doe',
@@ -288,13 +289,13 @@ const Hero = () => {
   <div className={styles.courseNav}>
     <ul>
       <li>
-        <Link href="">Html</Link>
+        <Link href="/html5">Html</Link>
       </li>
       <li>
-        <Link href="">Css</Link>
+        <Link href="/css3">Css</Link>
       </li>
       <li>
-        <Link href="">javaScript</Link>
+        <Link href="/javaScriptx">javaScript</Link>
       </li>
       <li>
         <Link href="">React</Link>

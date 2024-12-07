@@ -1,0 +1,97 @@
+
+.htmlPage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(54, 115, 253, 0.2) 20%, transparent 70%),
+    radial-gradient(circle, rgba(255, 0, 0, 0.1) 15%, transparent 75%),
+    radial-gradient(circle, rgba(0, 255, 128, 0.15) 25%, transparent 80%);
+  background-size: 30% 30%;
+  z-index: -1;
+  animation: backgroundMove 30s infinite linear;
+}
+
+.htmlPage {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 0 5%; */
+}
+
+/* Keyframes for smooth background animation */
+@keyframes backgroundMove {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+
+.htmlPage {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 300px;
+  /* background-color: #f1f1f1; */
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.searchField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.courseList {
+  list-style: none;
+  padding: 0;
+}
+
+.courseItem {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.courseItem:hover {
+  background-color: #55a2e1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* h1 {
+  margin-top: 0;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-x: auto;
+} */
