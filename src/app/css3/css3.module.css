@@ -12,17 +12,7 @@
     z-index: -1;
     animation: backgroundMove 30s infinite linear;
   }
-  
-  .cssPage {
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 0 5%; */
-  }
-  
+
   /* Keyframes for smooth background animation */
   @keyframes backgroundMove {
     0% {
