@@ -5,11 +5,12 @@ import React from 'react'
 const Links = () => {
     const links = [
         {
+            
             title: "Home",
             path: "/",
         },
         {
-            title: "Tutorial",
+            title: "Tutorials",
             path: "/courses",
         },
     ];

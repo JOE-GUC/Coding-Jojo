@@ -1,13 +1,10 @@
 .hipe {
   position: relative;
-  overflow: hidden;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 50px;
   margin-top: 50px;
-
 }
 
 .hipe::before {
@@ -18,8 +15,8 @@
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(54, 115, 253, 0.2) 20%, transparent 70%),
-    radial-gradient(circle, rgba(255, 0, 0, 0.1) 15%, transparent 75%),
-    radial-gradient(circle, rgba(0, 255, 128, 0.15) 25%, transparent 80%);
+              radial-gradient(circle, rgba(255, 0, 0, 0.1) 15%, transparent 75%),
+              radial-gradient(circle, rgba(0, 255, 128, 0.15) 25%, transparent 80%);
   background-size: 30% 30%;
   z-index: -1;
   animation: backgroundMove 12s infinite linear;
@@ -30,50 +27,12 @@
   0% {
     transform: translateX(0) translateY(0);
   }
-
   50% {
     transform: translateX(-50%) translateY(-50%);
   }
-
   100% {
     transform: translateX(0) translateY(0);
   }
-}
-
-.cour {
-  display: inline-block;
-  border: 1px solid #ccc;
-  width: 300px;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  text-align: left;
-}
-
-.cour img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.cour:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-.cour h2 {
-  font-size: 20px;
-  padding-left: 5px;
-}
-
-.cour p {
-  font-size: 12px;
-  padding-right: 220px;
-  padding-left: 2px;
-}
-
-.rating {
-  margin-right: 35px;
 }
 
 .hipe h1 {
@@ -86,7 +45,6 @@
 .seachP {
   display: flex;
   justify-content: center;
-
 }
 
 .searchBar {
@@ -98,14 +56,52 @@
   font-size: 16px;
 }
 
-/* 
-.cour {
-  margin-bottom: 20px;
-} */
-
 .loader {
   width: 50px;
   height: 50px;
   margin: auto;
   display: block;
+}
+
+/* New container for displaying courses in a grid */
+.coursesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Automatically adjust columns */
+  gap: 20px; /* Add space between cards */
+  padding: 20px 0;
+}
+
+/* Styling for individual course cards */
+.cour {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.cour:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+}
+
+.cour img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cour h2 {
+  font-size: 18px;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+
+.cour p {
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.rating {
+  margin-top: 10px;
 }
