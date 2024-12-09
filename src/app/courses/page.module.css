@@ -1,3 +1,14 @@
+.hipe {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  margin-top: 50px;
+
+}
 
 .hipe::before {
   content: '';
@@ -7,8 +18,8 @@
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(54, 115, 253, 0.2) 20%, transparent 70%),
-              radial-gradient(circle, rgba(255, 0, 0, 0.1) 15%, transparent 75%),
-              radial-gradient(circle, rgba(0, 255, 128, 0.15) 25%, transparent 80%);
+    radial-gradient(circle, rgba(255, 0, 0, 0.1) 15%, transparent 75%),
+    radial-gradient(circle, rgba(0, 255, 128, 0.15) 25%, transparent 80%);
   background-size: 30% 30%;
   z-index: -1;
   animation: backgroundMove 12s infinite linear;
@@ -19,21 +30,23 @@
   0% {
     transform: translateX(0) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-50%);
   }
+
   100% {
     transform: translateX(0) translateY(0);
   }
 }
+
 .cour {
   display: inline-block;
   border: 1px solid #ccc;
   width: 300px;
   margin-left: 15px;
-margin-bottom: 15px;
+  margin-bottom: 15px;
   border-radius: 5px;
-  /* padding-left: 20px; */
   text-align: left;
 }
 
@@ -44,8 +57,8 @@ margin-bottom: 15px;
 }
 
 .cour:hover {
-    transform: scale(1.1);
-    transition: 1s;
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 .cour h2 {
@@ -61,18 +74,38 @@ margin-bottom: 15px;
 
 .rating {
   margin-right: 35px;
-} 
-
-.hipe h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
 }
 
+.hipe h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.seachP {
+  display: flex;
+  justify-content: center;
+
+}
+
+.searchBar {
+  padding: 15px;
+  width: 50%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* 
+.cour {
+  margin-bottom: 20px;
+} */
+
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 450px;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
 }

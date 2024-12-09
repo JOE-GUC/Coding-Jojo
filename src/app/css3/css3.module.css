@@ -31,13 +31,13 @@
 .cssPage {
     display: flex;
     height: 100vh;
+    margin-top: 50px;
     font-family: Arial, sans-serif;
   }
   
   .sidebar {
     width: 300px;
-    /* background-color: #f8f9fa; */
-    padding: 20px;
+    padding: 20px 10px 10px 50px;
     border-right: 1px solid #ddd;
     overflow-y: auto;
   }

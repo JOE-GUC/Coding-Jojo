@@ -29,19 +29,20 @@
   }
 
 
-.jsPage {
+  .jsPage {
     display: flex;
     height: 100vh;
+    margin-top: 50px;
     font-family: Arial, sans-serif;
   }
   
   .sidebar {
     width: 300px;
-    /* background-color: #f1f1f1; */
-    padding: 20px;
-    border-right: 1px solid #ccc;
+    padding: 20px 10px 10px 50px;
+    border-right: 1px solid #ddd;
     overflow-y: auto;
   }
+  
   
   .searchField {
     width: 100%;

@@ -6,9 +6,10 @@
 }
 
 .contentWrapper {
-  max-width: 1450px; /* Aligns with the hero section */
-  margin: 0 auto; /* Ensures equal margins on both sides */
-  padding: 0 20px; /* Adds padding for smaller screens */
+  padding: 0 50px;
+
+  margin: 0 auto;
+ 
 }
 
 .footerContainer {

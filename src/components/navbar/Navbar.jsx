@@ -41,6 +41,138 @@ const Navbar = () => {
 
   return (
 <div className={styles.navbarContainer}>
+
+<section className={styles.courseContainer}>
+        <div className={styles.courseNav}>
+          <ul>
+            <li>
+              <Link href="/html5">HTML</Link>
+            </li>
+            <li>
+              <Link href="/css3">CSS</Link>
+            </li>
+            <li>
+              <Link href="/javaScriptx">JAVASCRIPT</Link>
+            </li>
+            <li>
+              <Link href="">REACT</Link>
+            </li>
+            <li>
+              <Link href="">NEXT</Link>
+            </li>
+            <li>
+              <Link href="">PYTHON</Link>
+            </li>
+            <li>
+              <Link href="">PHP</Link>
+            </li>
+            <li>
+              <Link href="">ANGULAR</Link>
+            </li>
+            <li>
+              <Link href="">JAVA</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+            <li>
+              <Link href="">Html</Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+
   <div className={styles.contentWrapper}>
     <div className={styles.logoContainer}>
       <Image

@@ -1,11 +1,12 @@
 /* Wrap content to align with hero section */
 .contentWrapper {
-  max-width: 1450px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
+
 }
 
   /* Navbar container */
@@ -13,7 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 1rem 2rem; */
     background-color: #01011ef9;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,15 +25,9 @@
   .logoContainer {
     display: flex;
     align-items: center;
-    max-width: 1450px;
-
   }
   
-  .logo {
-    width: 130px;
-    height: 60px;
-    object-fit: cover;
-  }
+
   
   /* Search bar */
   .searchContainer {
@@ -138,3 +132,47 @@
     }
   }
   
+
+  
+/* ========================================================= */
+
+.courseContainer {
+  position: fixed;
+  top: 60px;
+  overflow: hidden;
+  z-index: 10;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 3%;
+  background-color: #1a2530f9;
+}
+
+.courseNav {
+  /* overflow-x: auto; */
+  white-space: nowrap; 
+  scroll-behavior: smooth; 
+  padding: 20px 0;
+  scrollbar-width: none; 
+}
+
+.courseNav ul {
+  display: flex; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.courseNav ul li {
+  margin: 0 10px;
+  font-size: 15px;
+  font-weight: 400;
+  display: inline-block; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.courseNav li:hover {
+  color: #4dbafe;
+ }
+
+/* ========================================================= */

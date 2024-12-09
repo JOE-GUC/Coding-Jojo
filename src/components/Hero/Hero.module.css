@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 50px;
+  margin-top: 50px;
 
 }
 
@@ -23,16 +24,6 @@
   background-size: 30% 30%;
   z-index: -1;
   animation: backgroundMove 30s infinite linear;
-}
-
-.heroContainer {
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 5%;
 }
 
 /* Keyframes for smooth background animation */
@@ -52,9 +43,12 @@
 
 
 .contentWrapper {
-  max-width: 1450px;
   margin: 0 auto;
   width: 100%;
+}
+
+.heroContainerz {
+  margin-top: 20px;
 }
 
 .slider {
@@ -68,7 +62,7 @@
 
 .description {
   flex: 1;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 .heading {
@@ -84,6 +78,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  max-width: 600px;
 }
 
 .ctaButtons {
@@ -121,10 +116,10 @@
 
 .videoContainer {
   flex: 1;
-  max-width: 600px;
+  max-width: 500px;
   border-radius: 12px;
   overflow: hidden;
-  /* box-shadow: 0 10px 25px rgba(0,0,0,0.1); */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .coursesSection {
@@ -222,24 +217,17 @@
   }
 }
 
-.heroContainer {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 2rem 5%;
-}
-
 .heroMainSection {
   display: flex;
   align-items: center;
   gap: 3rem;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 
 .heroContent {
   flex: 1;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 .mainTitle {
@@ -513,8 +501,8 @@
 }
 
 .testimonialCarousel {
-  max-width: 1450px;
   width: 100%;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -561,87 +549,3 @@
   height: 14px;
 }
 
-
-/* ========================================================= */
-
-.courseContainer {
-  position: fixed;
-  top: 57px;
-  overflow: hidden;
-  z-index: 10;
-  max-width: 1450px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 20px 0;
-}
-
-.courseNav {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent items from wrapping */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  padding: 10px 0;
-  /* scrollbar-width: none; For Firefox */
-}
-
-.courseNav ul {
-  display: flex; /* Align items horizontally */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.courseNav ul li {
-  margin: 0 10px;
-  font-size: 15px;
-  font-weight: 400;
-  display: inline-block; /* Ensure items are inline */
-  cursor: pointer; /* Make the items clickable */
-  /* transition: background-color 0.3s ease; Smooth transition for background change */
-}
-
-/* Focused state for li items */
-.courseNav ul li:focus {
-  background-color: #000000; /* Set your desired focus background color */
-  outline: none; /* Remove default outline if desired */
-}
-
-/* Optional: Hover state to improve interactivity */
-.courseNav ul li:hover {
-padding: 7px;
-  background-color: #fc0000; /* Slightly different color for hover */
-}
-
-
-.courseContainer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgb(54, 114, 253) 20%, transparent 70%),
-    radial-gradient(circle, rgb(255, 0, 0) 15%, transparent 75%),
-    radial-gradient(circle, rgb(0, 255, 128) 25%, transparent 80%);
-  background-size: 30% 30%;
-  z-index: -1;
-  animation: backgroundMove 30s infinite linear;
-}
-
-
-
-/* Keyframes for smooth background animation */
-@keyframes backgroundMove {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-}
-
-/* ========================================================= */

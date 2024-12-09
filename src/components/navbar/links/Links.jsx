@@ -9,7 +9,7 @@ const Links = () => {
             path: "/",
         },
         {
-            title: "Courses",
+            title: "Tutorial",
             path: "/courses",
         },
     ];

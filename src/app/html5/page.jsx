@@ -50,25 +50,32 @@ const Html = () => {
 
   const courseContent = {
     "HTML HOME": `
-      <h1>HTML Tutorial</h1>
-      <p>HTML is the standard markup language for Web pages.</p>
-      <p>With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
-      <h2>Easy Learning with HTML "Try it Yourself"</h2>
+      <h2>HTML Tutorial</h2><br />
+      <p>HTML is the main markup language for describing the structure of web pages..</p><br />
+<Image
+  src="/html-illustration.png" 
+  alt="#"
+/> <br />
+ <br/><br/>
+      <p>Easy Learning with HTML "Try it Yourself"</p>
       <p>With our "Try it Yourself" editor, you can edit the HTML code and view the result:</p>
-      <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
 
-  &lt;h1&gt;This is a Heading&lt;/h1&gt;
-  &lt;p&gt;This is a paragraph.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
       <p>Click on the "Try it Yourself" button to see how it works.</p>
     `,
+
+    "HTML Introduction": `
+    <h2>HTML Introduction</h2>
+    <h2>What is HTML</h2>
+    <p>HTML stands for HyperText Markup Language.</p>
+    <p>HTML is the standard markup language for creating web pages.</p>
+    <p>HTML documents consist of HTML tags.</p>
+    <p>HTML tags label pieces of content (e.g., headings, paragraphs, images).</p>
+    <p>HTML tags are delineated by angle brackets.</p>
+    <p>HTML tags have attributes, which provide additional information about the element.</p>
+    <h2>Example</h2>
+    <p>The following is an example of an HTML document:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+    `
     // Add more content for other titles as needed.
   };
 
@@ -99,7 +106,6 @@ const Html = () => {
         </ul>
       </aside>
       <main className={styles.content}>
-        <h1>HTML Course Content</h1>
         <div dangerouslySetInnerHTML={{ __html: selectedContent || "<p>Select a topic to view the content.</p>" }} />
       </main>
     </div>
