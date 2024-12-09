@@ -108,101 +108,61 @@ const Navbar = () => {
               <Link href="">JAVA</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">TYPESCRIPT</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">NODEJS</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">EXPRESSJS</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">MONGODB</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">GIT</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">SQL</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">MYSQL</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">EXCEL</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">XML</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">JQUERY</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">BOOTSTRAP</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">C</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">C++</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">C#</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">DJANGO</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">SASS</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">VUE</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
+              <Link href="">AWS</Link>
             </li>
             <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
-            </li>
-            <li>
-              <Link href="">Html</Link>
+              <Link href="">TAILWIND CSS</Link>
             </li>
           </ul>
         </div>
