@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Links from './links/Links';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
@@ -39,11 +39,46 @@ const Navbar = () => {
     setSpecificCourseSearch(searchTerm.toLowerCase() === specificCourseName.toLowerCase());
   };
 
+  const courseNavRef = useRef(null);
+
+  const handleMouseDown = (e) => {
+    const nav = courseNavRef.current;
+    nav.isDown = true;
+    nav.startX = e.pageX - nav.offsetLeft; // Initial mouse position relative to container
+    nav.scrollLeft = nav.scrollLeft; // Current scroll position
+  };
+
+  const handleMouseMove = (e) => {
+    const nav = courseNavRef.current;
+    if (!nav.isDown) return; // Exit if not dragging
+
+    e.preventDefault();
+    const x = e.pageX - nav.offsetLeft; // Get current mouse position relative to container
+    const walk = (x - nav.startX) * 2; // Adjust multiplier for smoother and flexible scroll speed
+
+    // Smooth scroll handling:
+    nav.scrollLeft -= walk; // Scroll the container horizontally
+    nav.startX = x; // Update starting mouse position for next move
+  };
+
+  const handleMouseUp = () => {
+    const nav = courseNavRef.current;
+    nav.isDown = false; // Disable drag mode when mouse button is released
+  };
+
+
   return (
 <div className={styles.navbarContainer}>
 
 <section className={styles.courseContainer}>
-        <div className={styles.courseNav}>
+<div
+        className={styles.courseNav}
+        ref={courseNavRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseUp}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
           <ul>
             <li>
               <Link href="/html5">HTML</Link>

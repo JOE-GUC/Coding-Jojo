@@ -135,28 +135,31 @@
 
   
 /* ========================================================= */
-
 .courseContainer {
   position: fixed;
   top: 60px;
-  overflow: hidden;
   z-index: 10;
-  margin: 0 auto;
   width: 100%;
   padding: 0 3%;
   background-color: #1a2530f9;
+  overflow: hidden; /* Hide overflow */
 }
 
 .courseNav {
-  /* overflow-x: auto; */
-  white-space: nowrap; 
-  scroll-behavior: smooth; 
+  overflow-x: auto; /* Allows horizontal scrolling */
+  white-space: nowrap;
+  scroll-behavior: smooth; /* Smooth scroll behavior */
   padding: 20px 0;
-  scrollbar-width: none; 
+  margin: 0;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.courseNav::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Edge, and Safari */
 }
 
 .courseNav ul {
-  display: flex; 
+  display: inline-flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -166,13 +169,14 @@
   margin: 0 10px;
   font-size: 15px;
   font-weight: 400;
-  display: inline-block; 
-  cursor: pointer; 
+  display: inline-block;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .courseNav li:hover {
   color: #4dbafe;
- }
+}
+
 
 /* ========================================================= */
